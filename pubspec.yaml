@@ -1,0 +1,88 @@
+name: toko_makanan_minuman
+description: Aplikasi POS untuk Toko Makanan & Minuman - Simple & Sederhana menggunakan Varcell App
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # UI & Material Design
+  cupertino_icons: ^1.0.2
+  
+  # State Management
+  provider: ^6.0.0
+  
+  # Database
+  sqflite: ^2.3.0
+  sqflite_common_ffi: ^2.3.0
+  
+  # File & Path
+  path_provider: ^2.1.0
+  path: ^1.8.0
+  
+  # Formatting & Localization
+  intl: ^0.19.0
+  
+  # HTTP Requests (Optional - jika pakai API)
+  http: ^1.1.0
+  
+  # JSON Serialization
+  json_annotation: ^4.8.0
+  
+  # PDF Generation (untuk invoice)
+  pdf: ^3.10.0
+  printing: ^5.11.0
+  
+  # Image Handling
+  image_picker: ^1.0.4
+  
+  # Notifications (Optional)
+  flutter_local_notifications: ^15.1.0
+  
+  # Logging & Debugging
+  logger: ^2.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+  
+  # Code Generation
+  build_runner: ^2.4.0
+  json_serializable: ^6.7.0
+  
+  # Testing
+  mockito: ^5.4.0
+  integration_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+  # Assets
+  assets:
+    - assets/images/
+    - assets/icons/
+    - assets/fonts/
+
+  # Fonts
+  fonts:
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/Roboto-Regular.ttf
+        - asset: assets/fonts/Roboto-Bold.ttf
+          weight: 700
+
+# Platform-specific configurations
+targets:
+  $default:
+    builders:
+      json_serializable:
+        options:
+          create_to_json: true
